@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+        tools:context=".ItemActivity">
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </LinearLayout>
+
+
+        <!--_________________BANNER__________________-->
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/black"
+                android:src="@drawable/banner1" />
+
+        <!--_________________MOVIE NAME__________________-->
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="MOVIE"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+        <!--_________________SEASON OPTION__________________-->
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/blue"
+                android:backgroundTint="@color/white"
+                android:entries="@array/Seasons"
+                android:prompt="@string/SelectSeason" />
+
+
+        <!--_________________DESCRIPTION__________________-->
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="DESCRIPTION"
+                android:textColor="@color/white"
+                app:colorClickableText="@color/red" />
+
+        <!--_________________PLAY BUTTONS__________________-->
+            <Button
+                android:id="@+id/playbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshape"
+                android:text="Play Now"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/watchbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button2"
+                android:text="Watch Trailer"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+        <!--_________________FEEDBACK BUTTONS__________________-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                    <com.like.LikeButton
+                        android:id="@+id/star_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        app:icon_size="15dp"
+                        app:icon_type="heart"
+                        android:layout_weight="1"/>
+
+                    <com.like.LikeButton
+                        android:id="@+id/star_button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        app:icon_size="15dp"
+                        app:icon_type="Star" />
+
+                    <com.like.LikeButton
+                        android:id="@+id/thumb_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        app:circle_end_color="@android:color/holo_blue_dark"
+                        app:circle_start_color="@android:color/holo_blue_bright"
+                        app:dots_primary_color="@android:color/holo_blue_light"
+                        app:dots_secondary_color="@android:color/holo_blue_dark"
+                        app:icon_size="15dp"
+                        app:like_drawable="@drawable/thumb_on"
+                        app:unlike_drawable="@drawable/thumb_off" />
+
+            </LinearLayout>
+
+
+        <!--_________________EPISODE LIST__________________-->
+            <RelativeLayout
+                android:id="@+id/episodelist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:clickable="true">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+
+
+            <!--_________________CAST TITLE__________________-->
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/cast"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/recycler"
+                    android:text="CAST"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:paddingTop="10dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler4"
+                    android:layout_below="@+id/cast"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+</ScrollView>

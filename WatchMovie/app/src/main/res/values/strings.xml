@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">WatchMovie</string>
+    <string name="tab_text_1">HOME</string>
+    <string name="tab_text_2">MOVIES</string>
+    <string name="tab_text_3">MUSIC</string>
+    <string name="tab_text_4">SERIES</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_item">ItemActivity</string>
+
+
+    <string name="desc">Us is a 2019 American horror film written and directed by Jordan Peele, starring Lupita Nyong\'o, Winston Duke, Shahadi Wright Joseph, Evan Alex, Elisabeth Moss, and Tim Heidecker. The film follows Adelaide Wilson (Nyong’o) and her family who arrive at their summer home in Santa Cruz and are attacked by a group of menacing doppelgängers.The project was first announced in February 2018, and much of the cast joined that summer. Peele produced the film alongside Jason Blum and Sean McKittrick (with the trio previously having collaborated on Get Out and BlacKkKlansman), as well as Ian Cooper. Filming took place from July to October 2018 in California, mostly in Los Angeles and Pasadena and also in Santa Cruz.</string>
+
+    <string name="SelectSeason">Select Season</string>
+
+    <string-array name="Seasons">
+        <item>Season 1</item>
+        <item>Season 2</item>
+        <item>Season 3</item>
+        <item>Season 4</item>
+    </string-array>
+
+
+
+
+</resources>
