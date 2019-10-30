@@ -1,6 +1,7 @@
 package com.example.watchmovie;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,6 +83,16 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.RecViewHolder> {
             genre.setText("Name: " + movie.getGenre());
             year.setText("Date: " + movie.getYear());
             imageView.setImageResource(movie.getVideo());
+
+            imageView.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    // your code here
+                   // Toast.makeText(context,"hello",Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(context,VideoActivity.class);
+                    context.startActivity(intent);
+
+                }
+            });
 
 
 
